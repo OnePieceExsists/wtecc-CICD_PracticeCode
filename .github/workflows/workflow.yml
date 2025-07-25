@@ -16,8 +16,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-        python3 -m pip install --upgrade pip
-        pip3 install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
       - name: Lint with flake8
         run: |
@@ -26,3 +26,4 @@ jobs:
 
       - name: Run unit tests with nose
         run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
+
